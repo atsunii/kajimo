@@ -6,10 +6,9 @@
     </div>
     <div class='account-page__inner--right user-form'>
       <%= form_with model: resource, as: resource_name, url: registration_path(resource_name), local: true do |f|%>
-        <%= devise_error_messages!%>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :name%>
+            <%= f.label :name, "ニックネーム" %>
           </div>
           <div class='field-input'>
             <%= f.text_field :name, autofocus: true%>
@@ -17,7 +16,7 @@
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :email%>
+            <%= f.label :email, "メールアドレス" %>
           </div>
           <div class='field-input'>
             <%= f.email_field :email%>
@@ -25,7 +24,7 @@
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :password%>
+            <%= f.label :password, "パスワード"%>
             <i>(英数字6文字以上)</i>
           </div>
           <div class='field-input'>
@@ -34,14 +33,14 @@
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :password_confirmation%>
+            <%= f.label :password_confirmation, "パスワード再入力"%>
           </div>
           <div class='field-input'>
             <%= f.password_field :password_confirmation, autocomplete: "off"%>
           </div>
         </div>
         <div class='actions'>
-          <%= f.submit "Create Account", class: 'btn'%>
+          <%= f.submit "新規登録", class: 'btn'%>
         </div>
       </div>
     <% end %>
